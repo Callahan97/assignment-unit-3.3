@@ -40,8 +40,14 @@ let positives = [];
 let negatives = [];
 let zeroes = [];
 
-for(supplyChanges){
-  
+for(let i=0; i < supplyChanges.length; i++){
+if (supplyChanges[i] < 0) {
+  negatives.push(supplyChanges[i]);
+} else if (supplyChanges[i] > 0) {
+  positives.push(supplyChanges[i]);
+} else if (supplyChanges[i] === 0){
+zeroes.push(supplyChanges[i]);
+}
 }
 
 
